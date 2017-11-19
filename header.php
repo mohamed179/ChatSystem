@@ -10,4 +10,26 @@
 </head>
 <body>
 	<header>
+		<nav id="main-nav">
+			<div id="main-wrapper">
+				<div id="nav-menu">
+					<ul>
+						<li><a target="_self" href="index.php">Home</a></li>
+						<li><a target="_self" href="">Profile</a></li>
+					</ul>
+				</div>
+				<div id="nav-user">
+					<ul>
+						<li><a target="_self" href="login.php">Login</a></li>
+						<li><a target="_self" href="signup.php">Signup</a></li>
+					</ul>
+				</div>
+				<div id="nav-search">
+					<form>
+						<input type="text" name="search" placeholder="Search.."/>
+						<button type="submit">submit</button>
+					</form>
+				</div>
+			</div>
+		</nav>
 	</header>
