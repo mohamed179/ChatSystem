@@ -1,0 +1,88 @@
+h1 {
+	text-align: center;
+	font-size: 50px;
+	padding: 0;
+	margin: 15px;
+}
+
+#signup {
+	width: 30%;
+	margin: auto auto;
+	border-radius: 5px;
+	background: #f2f2f2;
+	padding: 20px;
+	overflow: hidden;
+}
+
+#signup form {
+	width: 100;
+}
+
+.tab {
+	display: none;
+	overflow: hidden;
+	width: 100%;
+}
+
+.tab h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+.tab input, .tab select {
+	padding: 10px;
+	width: 100%;
+	font-size: 17px;
+	border: 1px solid #aaaaaa;
+	margin: 10px auto;
+	display: inline-block;
+	box-sizing : border-box;
+}
+
+.tab input.invalid {
+	background-color: #ffdddd;
+}
+
+#signup-buttons {
+	float: left;
+	width: 100%;
+}
+
+#signup-buttons button {
+	border: none;
+	padding: 10px 20px;
+	font-size: 17px;
+	color: #ffffff;
+	background: #4CAF50;
+	float: right;
+	cursor: pointer;
+	margin-left: 5px;
+	display: none;
+}
+
+#signup-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+	#signup {
+		width: 95%;
+	}
+	
+	#nav-user {
+		margin-right: 10px;
+	}
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+	#signup {
+		width: 70%;
+	}
+	
+	#nav-user {
+		margin-right: 10px;
+	}
+}
+
