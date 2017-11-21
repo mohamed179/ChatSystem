@@ -3,7 +3,7 @@
 	<section>
 		<h1>Sign up</h1>
 		<div id="signup">
-			<form action="includes/signup.inc.php" method="POST" onsubmit="return validatefrom()">
+			<form action="includes/signup.inc.php" method="POST" onsubmit="return validatefrom()" target="_self">
 				<div class="tab">
 					<h2>Personal</h2>
 					<label for="fname"><b>Firstname :</b></label>
