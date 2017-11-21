@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-	<header>
+	<header id="main-header">
 		<nav id="main-nav">
 			<div id="main-wrapper">
 				<div id="nav-menu">
