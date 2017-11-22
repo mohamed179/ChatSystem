@@ -11,7 +11,7 @@
 					<label for="lname"><b>Lastname :</b></label>
 					<input type="text" name="lname" placeholder="Enter lastname.." oninput="this.className = ''" />
 					<label for="dob"><b>Date of birth :</b></label>
-					<input type="date" name="dob" />
+					<input type="date" name="dob" oninput="this.className = ''"/>
 					<label for="gdr"><b>Gender :</b></label>
 					<select name="gdr">
 						<option>Male</option>

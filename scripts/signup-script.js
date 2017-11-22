@@ -42,9 +42,9 @@ function validatefrom () {
 	return (checkInputs() && validatePass());
 }
 
-function nxtPrev (x) {
-	if (x <= 0 || checkInputs()) {
-		currentTab += x;
+function nxtPrev ($x) {
+	if ($x <= 0 || ($x == 1 && checkInputs())) {
+		currentTab += $x;
 		showTab(currentTab);
 		if (currentTab == 0) {
 			document.getElementById("nxtBtn").style.display = "block";
@@ -59,6 +59,15 @@ function nxtPrev (x) {
 			document.getElementById("nxtBtn").style.display = "none";
 			document.getElementById("prevBtn").style.display = "block";
 			document.getElementById("submitBtn").style.display = "block";
+		}
+	}
+	
+	if ($x == -1) {
+		var tabs = document.getElementsByClassName("tab");
+		var inputs = tabs[currentTab + 1].getElementsByTagName("input");
+		var check = true;
+		for (i = 0; i < inputs.length; i++) {
+			inputs[i].className = "";
 		}
 	}
 }
