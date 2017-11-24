@@ -14,8 +14,8 @@
 					<input type="date" name="dob" oninput="this.className = ''"/>
 					<label for="gdr"><b>Gender :</b></label>
 					<select name="gdr">
-						<option>Male</option>
-						<option>Female</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
 					</select>
 				</div>
 				<div class="tab">
@@ -23,7 +23,8 @@
 					<label for="email"><b>E-mail :</b></label>
 					<input type="email" name="email" placeholder="Enter e-mail.." oninput="this.className = ''" />
 					<label for="phone"><b>Phone <span>(not required)</span> :</b></label>
-					<input type="tel" name="phone" placeholder="Enter phone.." />
+					<input type="tel" name="phone" placeholder="Enter phone.." list="country-codes"/>
+					<?php include 'utilities/country_phone_codes.util.php'; ?>
 				</div>
 				<div class="tab">
 					<h2>Login info</h2>
