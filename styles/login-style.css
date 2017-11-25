@@ -1,0 +1,62 @@
+h1 {
+	text-align: center;
+	font-size: 50px;
+	padding: 0;
+	margin: 15px;
+}
+
+#login {
+	width: 30%;
+	margin: auto auto;
+	border-radius: 5px;
+	background: #f2f2f2;
+	padding: 20px;
+	overflow: hidden;
+}
+
+#login form {
+	width: 100;
+}
+
+#login form input {
+	padding: 10px;
+	width: 100%;
+	font-size: 17px;
+	border: 1px solid #aaaaaa;
+	margin: 10px auto;
+	display: inline-block;
+	box-sizing : border-box;
+}
+
+#login form input.invalid {
+	background-color: #ffdddd;
+}
+
+#login form button {
+	border: none;
+	padding: 10px 20px;
+	font-size: 17px;
+	color: #ffffff;
+	background: #4CAF50;
+	float: right;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+#login form button:hover {
+	opacity: 0.8;
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+	#login {
+		width: 95%;
+	}
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+	#login {
+		width: 70%;
+	}
+}
