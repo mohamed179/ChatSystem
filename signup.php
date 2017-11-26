@@ -1,3 +1,19 @@
+<?php
+
+// check if the user loged in...
+
+session_start();
+
+if (isset($_SESSION['ID'])) {
+	header("Location: index.php");
+	exit();
+} else {
+	session_unset();
+	session_destroy();
+}
+
+?>
+
 <?php include 'header.php'; ?>
 <link rel="stylesheet" href="styles/signup-style.css">
 	<section>
