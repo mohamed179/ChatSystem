@@ -19,10 +19,25 @@
 					</ul>
 				</div>
 				<div id="nav-user">
-					<ul>
-						<li><a target="_self" href="login.php">Login</a></li>
-						<li><a target="_self" href="signup.php">Signup</a></li>
-					</ul>
+					<?php
+					
+					session_start();
+					
+					if (isset($_SESSION["ID"])) {
+						echo '<ul>
+							  	<li><a target="_self" href="profile.php">' . $_SESSION['fname'] . '</a></li>
+								<li><a target="_self" href="includes/logout.inc.php">Logout</a></li>
+							  </ul>';
+					} else {
+						session_unset();
+						session_destroy();
+						echo '<ul>
+							  	<li><a target="_self" href="login.php">Login</a></li>
+								<li><a target="_self" href="signup.php">Signup</a></li>
+							  </ul>';
+					}
+					
+					?>
 				</div>
 				<div id="nav-search">
 					<form>
