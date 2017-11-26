@@ -1,8 +1,9 @@
 <?php
 
+session_start();
+require 'db.inc.php';
+
 if (isset($_POST['submit'])) {
-	
-	require 'db.inc.php';
 	
 	$login = htmlspecialchars($_POST['login']);
 	$pswd  = htmlspecialchars($_POST['pswd']);
@@ -23,7 +24,9 @@ if (isset($_POST['submit'])) {
 		$result = $conn->query($sql);
 		
 		if (! $result->num_rows == 1) {
-			header("Location: ../login.php?signin=wrong_login");
+			session_unset();
+			session_destroy();
+			header("Location: ../login.php?signin=wrong");
 			exit();
 		}
 		
@@ -31,12 +34,13 @@ if (isset($_POST['submit'])) {
 		$hashedPasswdCheck = password_verify($pswd, $row['pswd']);
 
 		if ($hashedPasswdCheck === false) {
-			header("Location: ../login.php?login=wrong_pswd");
+			session_unset();
+			session_destroy();
+			header("Location: ../login.php?login=wrong");
 			exit();
 		} else if ($hashedPasswdCheck === true) {
 			
 			// Login the user...
-			session_start();
 			$_SESSION['uname'] = $row['uname'];
 			$_SESSION['fname'] = $row['fname'];
 			$_SESSION['lname'] = $row['lname'];
@@ -49,7 +53,48 @@ if (isset($_POST['submit'])) {
 	}
 		
 	
-} else {
+} else if(isset($_SESSION['signupOK'])) {
+	
+	// checking the login and password...
+	
+	$login = $_SESSION['login'];
+	$pswd  = $_SESSION['pswd'];
+	
+	$sql = "Select * From users Where
+			uname = '$login'";
+	$result = $conn->query($sql);
+
+	if (! $result->num_rows == 1) {
+		session_unset();
+		session_destroy();
+		header("Location: ../login.php?signin=wrong");
+		exit();
+	}
+
+	$row = $result->fetch_assoc();
+	$hashedPasswdCheck = password_verify($pswd, $row['pswd']);
+
+	if ($hashedPasswdCheck === false) {
+		session_unset();
+		session_destroy();
+		header("Location: ../login.php?login=wrong");
+		exit();
+	} else if ($hashedPasswdCheck === true) {
+
+		// Login the user...
+		session_unset();
+		$_SESSION['uname'] = $row['uname'];
+		$_SESSION['fname'] = $row['fname'];
+		$_SESSION['lname'] = $row['lname'];
+		$_SESSION['email'] = $row['email'];
+		$_SESSION['ID']    = $row['ID'];
+		header("Location: ../index.php?login=success");
+		exit();
+	}
+	
+}else {
+	session_unset();
+	session_destroy();
 	header("Location: ../index.php");
 	exit();
 }

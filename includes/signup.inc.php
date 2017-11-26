@@ -184,22 +184,27 @@ if (isset($_POST['submit'])) {
 		exit();
 	} else {
 		// Hashing the password
-		$pswd = password_hash($pswd, PASSWORD_DEFAULT);
+		$hashedPswd = password_hash($pswd, PASSWORD_DEFAULT);
 	}
 	
 	$sql = "Insert Into users";
 	if (empty($phone)) {
 		$sql = $sql . " (fname, lname, dob, gdr, email, uname, pswd)
 						 Values
-						 ('$fname', '$lname', '$dob', '$gdr', '$email', '$uname', '$pswd')";
+						 ('$fname', '$lname', '$dob', '$gdr', '$email', '$uname', '$hashedPswd')";
 	} else {
 		$sql = $sql . " (fname, lname, dob, gdr, email, phone, uname, pswd)
 						 Values
-						 ('$fname', '$lname', '$dob', '$gdr', '$email', '$phone', '$uname', '$pswd')";
+						 ('$fname', '$lname', '$dob', '$gdr', '$email', '$phone', '$uname', '$hashedPswd')";
 	}
 	
 	if($conn->query($sql) === true) {
-		header("Location: signin.inc.php?signup=success");
+		
+		session_start();
+		$_SESSION['signupOK'] = "OK";
+		$_SESSION['login']    = $uname;
+		$_SESSION['pswd']     = $pswd;
+		header("Location: login.inc.php?signup=success");
 		exit();
 	} else {
 		header("Location: ../signup.php?signup=dberror");
