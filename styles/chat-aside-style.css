@@ -1,0 +1,199 @@
+/* for friend list */
+
+#main-aside {
+	position: fixed;
+	margin-top: 40px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 15%;
+	background: #f5f5f5;
+	border-left: 1px solid #cccccc;
+	overflow: hidden;
+}
+
+#friends-aside {
+	width: 100%;
+	height: calc(100% - 30px);;
+	overflow: auto;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+#friends-aside ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#friends-aside ul li {
+	float: top;
+	border-bottom: 1px solid #ffffff;
+}
+
+#friends-aside ul li a {
+	display: block;
+	color: #050505;
+	text-align: left;
+	padding: 10px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#friends-aside ul li a:hover {
+	background: #fcfcfc;
+}
+
+.unvisible-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#search-friend {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	background: #ffffff;
+	overflow: hidden;
+	border-top: 1px solid #cccccc;
+}
+
+#search-friend input[type=text] {
+	height: 100%;
+	padding: 5px;
+	width: 100%;
+	border: 0;
+	box-sizing : border-box;
+}
+
+/* for chat */
+
+#chat-aside {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: calc(15% + 2px);
+	margin-top: 40px;
+	background: #f8f8f8;
+	border-left: 1px solid #cccccc;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#toggle-chat {
+	width: 15px;
+	height: 100%;
+	float: left;
+	background: #777777;
+	color: #ffffff;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+}
+
+#toggle-chat-icon {
+	width: 100%;
+	position: relative;
+    top: calc(50% - 0.5em);
+}
+
+#chat-wrapper {
+	width: 250px;
+	height: 100%;
+	float: right;
+	display: block;
+}
+
+#msg-list {
+	width: 100%;
+	height: calc(100% - 30px);
+	overflow-y: scroll;
+	background-clip: padding-box;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+#msg-list div {
+	margin: 5px;
+	width: 70%;
+	display: inline-block;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+#msg-list div li {
+	border-radius: 20px;
+	margin-bottom: 5px;
+}
+
+#msg-list div li a {
+	display: block;
+	color: #050505;
+	padding: 10px;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.friend-msg {
+	float: left;
+}
+
+.friend-msg li {
+	background: lightblue;
+}
+
+.my-msg {
+	float: right;
+}
+
+.my-msg li {
+	background: lightgreen;
+}
+
+#enter-msg {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	background: #ffffff;
+	overflow: hidden;
+	border-top: 1px solid #cccccc;
+}
+
+#enter-msg textarea {
+	height: 100%;
+	padding: 5px;
+	width: 100%;
+	border: 0;
+	box-sizing : border-box;
+	font-weight: 10px;
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+	#main-aside {
+		width: 30%;
+	}
+	
+	#chat-aside {
+		position: fixed;
+		right: calc(30% + 2px);
+	}
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+	#main-aside {
+		width: 30%;
+	}
+	
+	#chat-aside {
+		position: fixed;
+		right: calc(30% + 2px);
+	}
+}

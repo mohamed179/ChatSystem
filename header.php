@@ -2,11 +2,14 @@
 <html lang="en-US">
 <head>
 	<meta name="charset" content="UTF-8"/>
-	<meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="description" content="A good chat system"/>
 	<base target="_blank"/>
 	<title>Chat System</title>
 	<link rel="stylesheet" href="styles/style.css">
+	<script src="scripts/script.js"></script>
+	<script src="scripts/jquery/jquery-3.2.1.min.js"></script>
+	<script src="scripts/jquery/script.js"></script>
 </head>
 <body>
 	<header id="main-header">

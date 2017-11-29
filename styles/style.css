@@ -3,6 +3,17 @@ body {
 	font-family: Arial;
 }
 
+textarea:focus, input:focus {
+    outline: none;
+}
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+	color: #cdcdcd;
+}
+
+/* for the header */
+
 #main-header {
 	position: sticky;
 	top: 0;
@@ -12,9 +23,7 @@ body {
 
 #main-nav {
 	width: 100%;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
-				0 2px 10px 0 rgba(0,0,0,0.12);
-	border-bottom: 1px solid #d0d0d0;
+	border-bottom: 1px solid #c0c0c0;
 	background: #e0e0e0;
 	overflow: hidden;
 }
