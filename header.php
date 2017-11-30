@@ -7,6 +7,7 @@
 	<base target="_blank"/>
 	<title>Chat System</title>
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
 	<script src="scripts/script.js"></script>
 	<script src="scripts/jquery/jquery-3.2.1.min.js"></script>
 	<script src="scripts/jquery/script.js"></script>

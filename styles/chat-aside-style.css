@@ -81,6 +81,7 @@
 	border-left: 1px solid #cccccc;
 	overflow: hidden;
 	z-index: 1;
+	display: none;
 }
 
 #toggle-chat {
@@ -92,24 +93,54 @@
 	cursor: pointer;
 	text-align: center;
 	position: relative;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 }
 
-#toggle-chat-icon {
+#toggle-chat:hover {
+	background: #858585;
+}
+
+.center-content {
+	display: block;
 	width: 100%;
 	position: relative;
-    top: calc(50% - 0.5em);
+	top: calc(50% - 0.5em);
+	text-align: center;
 }
 
 #chat-wrapper {
 	width: 250px;
 	height: 100%;
 	float: right;
-	display: block;
+	display: none;
 }
 
-#msg-list {
+#msg-head {
+	position: absolute;
+	top: 0;
 	width: 100%;
-	height: calc(100% - 30px);
+	height: 30px;
+	background: #000000;
+	overflow: hidden;
+	text-align: center;
+}
+
+#msg-head span a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#msg-head span a:hover {
+	text-decoration: underline;
+}
+
+.msg-list {
+	width: 100%;
+	height: calc(100% - 60px);
+	margin-top: 30px;
 	overflow-y: scroll;
 	background-clip: padding-box;
 	-webkit-user-select: none; /* Safari */        
@@ -118,7 +149,11 @@
 	user-select: none; /* Standard */
 }
 
-#msg-list div {
+.hidden-chat-list {
+	display: none;
+}
+
+.msg-list div {
 	margin: 5px;
 	width: 70%;
 	display: inline-block;
@@ -126,12 +161,12 @@
 	overflow: hidden;
 }
 
-#msg-list div li {
+.msg-list div li {
 	border-radius: 20px;
 	margin-bottom: 5px;
 }
 
-#msg-list div li a {
+.msg-list div li a {
 	display: block;
 	color: #050505;
 	padding: 10px;

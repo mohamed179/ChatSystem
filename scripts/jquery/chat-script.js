@@ -2,7 +2,20 @@ $(document).ready(function(){
 	
 	// to toggle chat side bar
 	$('#toggle-chat').click(function(){
-		$('#chat-wrapper').toggle('slide');
+		if ($('#chat-wrapper').is(':hidden')) {
+			$('#chat-wrapper').toggle('slow');
+			$('#toggle-chat-icon').attr('class', 'center-content fa fa-chevron-right');
+		} else {
+			$('#chat-wrapper').toggle('fast');
+			$('#toggle-chat-icon').attr('class', 'center-content fa fa-chevron-left');
+		}
+	});
+	
+	$('#friends-aside ul li a').click(function(){
+		if ($('#chat-wrapper').is(':hidden')) {
+			$('#chat-wrapper').toggle('slow');
+			$('#toggle-chat-icon').attr('class', 'center-content fa fa-chevron-right');
+		}
 	});
 	
 	// to add/send new message
