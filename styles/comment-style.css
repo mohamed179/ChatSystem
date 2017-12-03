@@ -1,0 +1,66 @@
+.post-comment {
+	overflow: hidden;
+	padding-bottom: 5px;
+}
+
+.post-comment-user-info {
+	width: 100%;
+	padding: 10px;
+	overflow: hidden;
+	background: #ffffff;
+	box-sizing : border-box;
+}
+
+.post-comment-user-info-img {
+	cursor: pointer;
+	overflow:hidden;
+	position: relative;
+	float: left;
+	border-radius: 5px;
+}
+
+.post-comment-user-info-img img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-sizing : border-box;
+	background: #ffffff;
+	overflow: hidden;
+}
+
+.post-comment-user-info-name {
+	width: 55%;
+	height: 100%;
+	float: left;
+	margin: 10px;
+	overflow: hidden;
+}
+
+.post-comment-user-info-name h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+
+.post-comment-user-info-name h3 a {
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.post-comment-user-info-name h3 a:hover {
+	text-decoration: underline;
+}
+
+.post-comment-content {
+	width: 100%;
+	overflow: hidden;
+}
+
+.post-comment-content p {
+	padding: 0 10px;
+	margin: 0;
+	text-align: right;
+}
+
+

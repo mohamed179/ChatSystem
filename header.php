@@ -19,7 +19,7 @@
 				<div id="nav-menu">
 					<ul>
 						<li><a target="_self" href="index.php">Home</a></li>
-						<li><a target="_self" href="">Profile</a></li>
+						<li><a target="_self" href="profile.php">Profile</a></li>
 					</ul>
 				</div>
 				<div id="nav-user">

@@ -1,0 +1,200 @@
+.post {
+	margin: 20px auto;
+	width: 500px;
+	padding: 20px;
+	background: #ffffff;
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.post-head {
+	overflow: hidden;
+}
+
+.post-head img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	float: left;
+}
+
+.post-head h3 {
+	display: inline;
+	margin: 0 0 0 10px;
+	padding: 0;
+	font-size: 1em;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+}
+
+.post-head h3 a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.post-head h3 a:hover {
+	text-decoration: underline;
+}
+
+.post-head h3 span {
+	font-size: 0.8em;
+	color: #777777;
+	margin-left: 10px;
+}
+
+.post-content {
+	margin-top: 15px;
+	padding: 20px;
+	background: #f5f5f5;
+}
+
+.post-content-text p {
+	margin: 0;
+}
+
+.post-content-img {
+	max-width: 100%;
+	max-height: 100%;
+	margin-top: 10px;
+}
+
+.post-content-img img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.post-action {
+	overflow: hidden;
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+	color: #333333;
+	font-weight: bold;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.post-action ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.post-action ul li {
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.post-action-item::after {
+	content: '';
+    display: block;
+    height: 50%;
+	top: 10px;
+    right: 0;
+    position: absolute;
+    width: 1px;
+	background: #888888;
+}
+
+.post-action ul li a {
+	height: 100%;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.post-action ul li a:hover {
+	text-decoration: underline;
+}
+
+.post-meta {
+	overflow: hidden;
+}
+
+.post-meta ul {
+	margin: 0;
+	padding: 10px;
+	height: 100%;
+	width: 100%;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.post-meta ul li {
+	float: left;
+}
+
+.post-meta-item {
+	margin-left: 20px;
+}
+
+.post-meta ul li a {
+	font-size: 0.8em;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.post-comments {
+	width: 100%;
+	overflow: hidden;
+}
+
+.post-comments-wrapper {
+	display: none;
+	overflow: hidden;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+}
+
+.show-hide-comments a {
+	color: #d35400;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+.show-hide-comments a:hover {
+	text-decoration: underline;
+}
+
+.post-add-comment {
+	width: 100%;
+	margin-top: 5px;
+	overflow: hidden;
+}
+
+.post-add-comment form {
+	width: 100%;
+	height: 100;
+	overflow: hidden;
+}
+
+.post-add-comment form input {
+	width: calc(100% - 75px);
+	padding: 5px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+	box-sizing : border-box;
+}
+
+.post-add-comment form button {
+	width: 70px;
+	border: none;
+	border-radius: 2px;
+	padding: 7px;
+	background-color: #b0b0b0;
+	cursor: pointer;
+}
+
+.post-add-comment form button:hover {
+	background-color: #a0a0a0;
+}
+
+.post-id {
+	display: none;
+}
