@@ -44,7 +44,10 @@ if (isset($_POST['submit'])) {
 			$_SESSION['uname'] = $row['uname'];
 			$_SESSION['fname'] = $row['fname'];
 			$_SESSION['lname'] = $row['lname'];
+			$_SESSION['dob']   = $row['dob'];
+			$_SESSION['gdr']   = $row['gdr'];
 			$_SESSION['email'] = $row['email'];
+			$_SESSION['phone'] = $row['phone'];
 			$_SESSION['ID']    = $row['ID'];
 			header("Location: ../index.php?login=success");
 			exit();
