@@ -107,7 +107,7 @@ function addPost ($ID, $poID,
 			$fname = $row['fname'];
 			$lname = $row['lname'];
 		}
-		addComment ($coID,
+		addComment ($uID, $coID,
 			$prof_img, $fname, $lname,
 			$cotime, $cotext);
 	}

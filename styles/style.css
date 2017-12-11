@@ -60,8 +60,8 @@ input::-webkit-input-placeholder {
 }
 
  #nav-search {
-	float: right;
-	margin-right: 15px;
+	float: left;
+	margin-left: 15px;
 }
 
 #nav-user::before {
@@ -120,6 +120,69 @@ input::-webkit-input-placeholder {
 
 #nav-search form button:hover {
 	background-color: #a0a0a0;
+}
+
+/* For home */
+
+#main-container {
+	width: 60%;
+	background: #dddddd;
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+	margin-left: 30px;
+	margin-bottom: 5px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+#create-post {
+	width: 70%;
+	overflow: hidden;
+	margin: auto auto;
+	padding: 20px;
+	background: #ffffff;
+	overflow: hidden;
+}
+
+#create-post form {
+	width: 100;
+}
+
+#create-post form textarea {
+	padding: 10px;
+	width: 100%;
+	height: 100px;
+	font-size: 14px;
+	resize: none;
+	border: 1px solid #aaaaaa;
+	margin: 10px auto;
+	display: inline-block;
+	box-sizing : border-box;
+	overflow: hidden;
+}
+
+#create-post form button {
+	border: none;
+	padding: 10px 20px;
+	font-size: 17px;
+	color: #ffffff;
+	background: #4CAF50;
+	float: right;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+#create-post form button:hover {
+	opacity: 0.8;
+}
+
+#post-container {
+	width: 70%;
+	overflow: hidden;
+	margin: 10px auto;
+	padding: 20px;
+	background: #eeeeee;
+	overflow: auto;
 }
 
 /* For Mobile */

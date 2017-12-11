@@ -1,6 +1,6 @@
 <?php
 
-function addComment ($coID,
+function addComment ($uID, $coID,
 	$prof_img, $fname, $lname,
 	$cotime, $cotext) {
 	
@@ -12,7 +12,7 @@ function addComment ($coID,
 		</div>
 		<div class='post-comment-user-info-name'>
 			<h3>
-				<a href='profile.php?id=1'>$fname $lname</a><span>at $cotime</span>
+				<a href='profile.php?id=$uID'>$fname $lname</a><span>at $cotime</span>
 			</h3>
 		</div>
 	</div>

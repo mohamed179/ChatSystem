@@ -76,7 +76,7 @@ if (isset($_SESSION['ID'])) {
 <link rel="stylesheet" href="styles/post-style.css"/>
 <link rel="stylesheet" href="styles/comment-style.css"/>
 <link rel="stylesheet" href="styles/user-style.css"/>
-<section id="container">
+<section id="profile-container">
 	<div id="prof-info">
 		<div id="prof-img" onmouseover="showUploadNewProfile();" onmouseleave="hideUploadNewProfile();">
 			

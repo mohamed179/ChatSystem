@@ -4,7 +4,8 @@ date_default_timezone_set("Africa/Cairo");
 
 session_start();
 
-if (isset($_SESSION['ID']) && isset($_POST['submit'])) {
+if (isset($_SESSION['ID']) &&
+	isset($_POST['submit'])) {
 	
 	require 'db.inc.php';
 	
