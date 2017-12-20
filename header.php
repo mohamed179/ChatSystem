@@ -29,7 +29,7 @@
 					
 					if (isset($_SESSION["ID"])) {
 						echo '<ul>
-							  	<li><a target="_self" href="profile.php">' . $_SESSION['fname'] . '</a></li>
+							  	<li><a target="_self" href="profile.php" id="user" name="u' . $_SESSION['ID'] . '">' . $_SESSION['fname'] . '</a></li>
 								<li><a target="_self" href="includes/logout.inc.php">Logout</a></li>
 							  </ul>';
 					} else {

@@ -118,7 +118,7 @@ if(isset($_SESSION['ID'])) {
 	}
 				
 	echo '	<div id="enter-msg">
-				<textarea placeholder="Enter message"></textarea>
+				<textarea placeholder="Enter message" onkeyup="chat.sendMessage(this, event);"></textarea>
 			</div>
 		</div>
 	</aside>
